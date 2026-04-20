@@ -1,3 +1,3 @@
 # mon-portfolio
 
-# https://frederic-frigault.github.io/monportfolio
+# https://frederic-frigault.github.io/mon-portfolio
