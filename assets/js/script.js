@@ -74,6 +74,24 @@ const skillObserver = new IntersectionObserver(
   { threshold: 0.3 },
 );
 
+function animateSkillBars() {
+  skillBars.forEach((bar) => {
+    // Si cette barre a déjà été animée, on passe à la suivante
+    if (bar.classList.contains("animated")) return;
+
+    const rect = bar.getBoundingClientRect();
+    // rect.top < window.innerHeight = la barre est visible dans l'écran
+    if (rect.top < window.innerHeight - 50) {
+      // data-level = l'attribut HTML data-level="75" → "75"
+      const level = bar.getAttribute("data-level");
+      // On change la largeur = la barre s'anime grâce à la transition CSS
+      bar.style.width = level + "%";
+      // Marquer CETTE barre comme animée (pas toutes les barres !)
+      bar.classList.add("animated");
+    }
+  });
+}
+
 const skillsSection = document.getElementById("skills");
 if (skillsSection) skillObserver.observe(skillsSection);
 
