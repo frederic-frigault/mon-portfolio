@@ -13,6 +13,7 @@
   --text-muted: #64748b; /* Texte discret */
 
   --border-color: #334155; /* Couleur des bordures */
+  --navbar-color: #ff7b00; /* Couleur de la barre de navigation au top */
 
   /* ── Typographie ── */
   --font-main: "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -176,7 +177,7 @@ ul {
   left: 0;
   right: 0;
   z-index: 1000; /* au-dessus de tout le reste */
-  background-color: rgba(255, 188, 112, 0.9);
+  background-color: var(--navbar-color);
   backdrop-filter: blur(12px); /* flou de l'arrière-plan (glassmorphism) */
   border-bottom: 1px solid var(--border-color);
   transition: all var(--transition);
