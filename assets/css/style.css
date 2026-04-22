@@ -14,6 +14,7 @@
 
   --border-color: #334155; /* Couleur des bordures */
   --navbar-color: #ff7b00; /* Couleur de la barre de navigation au top */
+  --nav-links-color: #ffffff;
 
   /* ── Typographie ── */
   --font-main: "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -212,7 +213,7 @@ ul {
   gap: var(--spacing-md);
 }
 .nav-links a {
-  color: var(--text-secondary);
+  color: var(--nav-links-color);
   font-weight: 500;
   position: relative;
   padding-bottom: 2px;
